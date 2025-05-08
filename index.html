@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌟 Ms Lovely | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Ms Lovely, a passionate full stack developer. View resume, certificates, and contact information.">
+</head>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".sidebar");
+    const ham = document.querySelector(".ham");
+    const cross = document.querySelector(".cross");
+
+    ham.addEventListener("click", () => {
+      sidebar.classList.remove("sidebarGo");
+      ham.style.display = "none";
+      cross.style.display = "block";
+    });
+
+    cross.addEventListener("click", () => {
+      sidebar.classList.add("sidebarGo");
+      cross.style.display = "none";
+      ham.style.display = "block";
+    });
+  });
+</script>
+
+<body>
+  <div class="container">
+    <div class="sidebar sidebarGo">
+      <nav>
+        <ul>
+          <li><a href="/">🏠 Home</a></li>
+          <li><a href="/intro.html">👩‍💻 My Intro</a></li>
+          <li><a href="../project.html">📂 Projects</a></li>
+          <li><a href="/CV.html">📄 CV</a></li>
+          <li><a href="/contact.html">📬 Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="main">
+
+        <img class="ham" src="ham.png" alt="open menu" width="23">
+        <img class="cross" src="cross.png" alt="close menu" width="23">
+
+        <div class="infoContainer">
+          <div class="devInfo">
+            <div class="Hello">🙋‍♀️ Hi, I am</div>
+            <div class="name">Ms Lovely</div>
+            <div class="aboutMe">💻 Full Stack Developer</div>
+            <div class="description">🚀 I am a passionate full stack developer with a knack for creating dynamic and responsive web applications. I love coding and enjoy solving complex problems.</div>
+
+            <div class="buttons">
+              <a href="/cv.pdf" target="_blank">
+                <button>📥 Download CV</button>
+              </a>
+              <a href="/contact.html">
+                <button>📞 Contact Me</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="devPic">
+            <img src="dev.png" alt="Lovely">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
